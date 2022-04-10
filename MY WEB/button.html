@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+    <meta charset="UTF-8">
+    <title>SEARCH BAR DEMO</title>
+
+    <style>
+        <body{
+           background-color: rgb(255, 178, 127); 
+           margin: 200px 40%;
+        }
+        form{
+          background-color: rgb(115, 231, 6);  
+          width: 300px;
+          height: 44px;
+          border-radius: 9px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        input{
+            all: unset;
+           font-size: 16px; 
+           color: rgb(38, 0, 255);
+           height: 100%;
+           width: 100px;  
+                padding: 8px 20px; 
+        }
+        ::placeholder{
+            color: rgb(22, 20, 20);
+            opacity: 0.9;
+        }
+        svg{
+            color: rgb(243, 19, 19);
+width: 24px;
+height: 24px;
+padding: 10px;
+        }  
+   button{
+       all: unset;
+       cursor: pointer;
+       width: 54px;
+       height: 84px;
+   }     
+          </style>
+</head>
+<body>
+    <form role="search" 
+    id="form">
+    <input type="search"
+    id="query"
+    name="q"
+    placeholder="SOLO BAZUNA SEARCH"
+    aria-label="search through site content">
+        <button>
+            <svg
+            view box="0 0 1024 1024">
+            <path class="path1" 
+            dir=M848.471 9281-263.059-263.059c 0-218.455 281.455d></path>
+                </svg>
+        </button>
+    </form>
+    <script>
+        const f=document.getElementById('form');
+        const q=document getElementById('query');
+        const google='https://www.google.com/search?
+        q=site%3A+';
+        cons site="pagedart.com"
+        function submitted{
+            event:prevent default();
+            const url=google+site+"+'q.value';
+            cons win=window.open(url,'-blank');
+            win.focus();
+        }
+        f.addEventListener('submit','submitted');
+    </script>
+</body>
